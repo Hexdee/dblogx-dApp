@@ -382,3 +382,43 @@ footer .row {
     color: #ffffffcc;
     font-weight: 400;
 }
+
+/* Connect */
+
+.connect-drop {
+  background: #272945;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: -50%;
+  display: none;
+  transform: translate(-50%);
+}
+.connect-drop.show {
+  transition: top 0.3s;
+  display: flex;
+  top: 0;
+}
+.connect-drop a {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border: 1px solid #3e77ff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.connect-drop a:hover {
+  background: linear-gradient(
+    93.5deg,
+    #3e77ff 4.46%,
+    #9f62d4 49.98%,
+    #ff4eaa 95.51%
+  );
+  border: none;
+}

@@ -1,5 +1,6 @@
-// const data = "data.json"
 const featuredContainer = document.querySelector(".posts");
+const explore = document.getElementById('explore')
+const signUp = document.querySelectorAll('.sign-up')
 
 const getData = async () => {
   const contents = await fetch("./src/data.json", { mode: "cors" });
@@ -47,11 +48,18 @@ const getFeaturedContents = (count) => {
     });
 };
 
-const explore = document.getElementById('explore')
-
 explore.addEventListener('click', (e) => {
     e.preventDefault();
     getFeaturedContents(3); // Fetch 3 more contents
 });
+signUp.forEach(button => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault()
+        showConnect()
+    })
+})
 
+const showConnect = () => {
+    document.querySelector('.connect-drop').classList.toggle('show')
+}
 getFeaturedContents(3);
