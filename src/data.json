@@ -1,0 +1,122 @@
+[
+  {
+    "postImg": "./src/image.png",
+    "title": "Web Development 101: A Beginner's Guide to Building Websites",
+    "content": "No coding experience required! David Lee breaks down the fundamentals of web development, guiding you through the process of building your first website.",
+    "authorImg": "./src/image.png",
+    "authorName": "Esther Howard",
+    "date": "June 12, 2021",
+    "comments": [{
+        "author": "Commenter one",
+        "message": "Wow! this is a nice blog"
+      },
+      {
+        "author": "Commenter two",
+        "message": "I'll like to know more"
+      },
+      {
+        "author": "Commenter three",
+        "message": "Interesting one"
+      }]
+  },
+  {
+    "postImg": "./src/image.png",
+    "title": "Unlocking the Secrets of the Hidden City: An Investigative Adventure",
+    "content": "Embark on a captivating journey as The History Wanderer unravels the mysteries of a forgotten city, uncovering its hidden past.",
+    "authorImg": "./src/image.png",
+    "authorName": "Esther Howard",
+    "date": "June 12, 2021",
+    "comments": [{
+        "author": "Commenter one",
+        "message": "Wow! this is a nice blog"
+      },
+      {
+        "author": "Commenter two",
+        "message": "I'll like to know more"
+      },
+      {
+        "author": "Commenter three",
+        "message": "Interesting one"
+      }]
+  },
+  {
+    "postImg": "./src/image.png",
+    "title": "Master the Art of Plant-Based Cooking: Easy & Delicious Recipes",
+    "content": "Impress your friends and family with mouthwatering plant-based meals! Explore simple yet flavorful recipes perfect for beginners.",
+    "authorImg": "./src/image.png",
+    "authorName": "Esther Howard",
+    "date": "June 12, 2021",
+    "comments": [{
+        "author": "Commenter one",
+        "message": "Wow! this is a nice blog"
+      },
+      {
+        "author": "Commenter two",
+        "message": "I'll like to know more"
+      },
+      {
+        "author": "Commenter three",
+        "message": "Interesting one"
+      }]
+  },
+  {
+    "postImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
+    "title": "Master the Art of Plant-Based Cooking: Easy & Delicious Recipes",
+    "content": "Impress your friends and family with mouthwatering plant-based meals! Explore simple yet flavorful recipes perfect for beginners.",
+    "authorImg": "./src/image.png",
+    "authorName": "Esther Howard",
+    "date": "June 12, 2021",
+    "comments": [{
+        "author": "Commenter one",
+        "message": "Wow! this is a nice blog"
+      },
+      {
+        "author": "Commenter two",
+        "message": "I'll like to know more"
+      },
+      {
+        "author": "Commenter three",
+        "message": "Interesting one"
+      }]
+  },
+  {
+    "postImg": "https://independent.ng/wp-content/uploads/Leslie-Jamison-576x430.jpg",
+    "title": "Master the Art of Plant-Based Cooking: Easy & Delicious Recipes",
+    "content": "Impress your friends and family with mouthwatering plant-based meals! Explore simple yet flavorful recipes perfect for beginners.",
+    "authorImg": "./src/image.png",
+    "authorName": "Esther Howard",
+    "date": "June 12, 2021",
+    "comments": [{
+        "author": "Commenter one",
+        "message": "Wow! this is a nice blog"
+      },
+      {
+        "author": "Commenter two",
+        "message": "I'll like to know more"
+      },
+      {
+        "author": "Commenter three",
+        "message": "Interesting one"
+      }]
+  },
+  {
+    "postImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/6070b0016932223adbd79ab2_sddefault-2.jpeg",
+    "title": "Master the Art of Plant-Based Cooking: Easy & Delicious Recipes",
+    "content": "Impress your friends and family with mouthwatering plant-based meals! Explore simple yet flavorful recipes perfect for beginners.",
+    "authorImg": "./src/image.png",
+    "authorName": "Esther Howard",
+    "date": "June 12, 2021",
+    "comments": [{
+        "author": "Commenter one",
+        "message": "Wow! this is a nice blog"
+      },
+      {
+        "author": "Commenter two",
+        "message": "I'll like to know more"
+      },
+      {
+        "author": "Commenter three",
+        "message": "Interesting one"
+      }]
+  }
+]

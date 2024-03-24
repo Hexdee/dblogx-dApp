@@ -186,6 +186,7 @@ header .sign-up {
   flex-direction: column;
   gap: 32px;
   padding: 0 20px;
+  flex: 1;
 }
 .post .title-desc {
   display: flex;
