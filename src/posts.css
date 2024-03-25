@@ -1,0 +1,80 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+.sidebar {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.main-bar {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sidebar .top-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 10px 12px;
+  background: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.03) 4.46%,
+    rgba(159, 98, 212, 0.03) 49.98%,
+    rgba(255, 78, 170, 0.03) 95.51%
+  );
+}
+.sidebar .categories {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.categories h3 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: -0.2px;
+}
+.categories .cat-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.cat-list li {
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.cat-list li.active {
+  background: #ffffff1a;
+}
+.main-bar .top-tab ul {
+  padding: 10px 32px;
+  list-style: none;
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+.main-bar .top-tab a {
+  color: #ffffffcc;
+  font-size: 1.25rem;
+}
+.main-bar .top-tab ul .active {
+  color: #ffffff;
+}
+.main-bar .posts {
+  background: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.03) 4.46%,
+    rgba(159, 98, 212, 0.03) 49.98%,
+    rgba(255, 78, 170, 0.03) 95.51%
+  );
+  padding: 32px;
+}
+.main-bar .btn {
+  align-self: center;
+}
