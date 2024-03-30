@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/index.css" />
     <script
       src="https://kit.fontawesome.com/3ee798e7d5.js"
       crossorigin="anonymous"
     ></script>
-    <script src="src/index.js" defer></script>
+    <link rel="stylesheet" href="src/index.css">
+    <script src="src/index.bundle.js" defer></script>
+    <script src="src/main.bundle.js" defer></script>
     <title>DBlogX</title>
   </head>
   <body>
@@ -31,7 +32,10 @@
             <li class="link"><a href="#">How it Works</a></li>
           </ul>
         </div>
-        <a href="#" class="sign-up">Connect</a>
+        <div class="connect-search">
+          <i class="fa-solid fa-magnifying-glass search"></i>
+          <a href="#" class="sign-up">Connect</a>
+        </div>
       </nav>
     </header>
     <main>
@@ -43,7 +47,7 @@
           </p>
           <div class="join-explore">
             <a href="#" class="join btn btn-colored">Join DBlogX</a>
-            <a href="posts.html" class="btn explore">Explore content</a>
+            <a href="#" class="btn explore" id="show-blogs">Explore content</a>
           </div>
         </div>
         <div class="banner-img">
@@ -67,7 +71,9 @@
       <div class="featured-content main-container">
         <h2>Featured Content</h2>
         <div class="row posts"></div>
-        <a href="#" class="btn btn-colored" id="explore">Explore more content</a>
+        <a href="#" class="btn btn-colored" id="explore"
+          >Explore more content</a
+        >
       </div>
 
       <div class="how main-container">
@@ -204,7 +210,9 @@
       <div class="foot main-container row">
         <div class="brand">
           <h1 class="logo">DBlogX</h1>
-          <p>Connecting Global Transactions with Blockchain Precision</p>
+          <p>
+            Empowering Creators with Decentralization and Direct Monetization
+          </p>
           <div class="socials">
             <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-discord"></i></a>

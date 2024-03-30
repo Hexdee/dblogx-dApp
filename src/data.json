@@ -1,12 +1,15 @@
 [
   {
-    "postImg": "./src/image.png",
+    "about": "COO at Team. Author of the upcoming book on Team Management and Leadership",
+    "postImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
     "title": "Web Development 101: A Beginner's Guide to Building Websites",
-    "content": "No coding experience required! David Lee breaks down the fundamentals of web development, guiding you through the process of building your first website.",
-    "authorImg": "./src/image.png",
+    "content": "<p>The internet has become an undeniably vast and powerful landscape. Ever wondered how all those amazing websites you visit come to life? The answer lies in the fascinating world of web development! Whether you're a budding entrepreneur with a business idea, an aspiring artist showcasing your work, or simply someone who wants to learn a valuable new skill, this beginner's guide will equip you with the foundational knowledge to build your very own website.</p><br /><h3>Demystifying the Basics:</h3><p>Websites are essentially collections of electronic documents (called web pages) that are linked together and hosted on a server. When you type a web address (URL) into your browser, it retrieves and displays the relevant web page on your screen. But how do these web pages come into existence? Here's a breakdown of the key ingredients:</p><ul><li><strong>HTML (HyperText Markup Language):</strong> Imagine HTML as the skeleton of your website. It defines the structure and content of your web pages, using tags to specify headings, paragraphs, images, and links.</li><li><strong>CSS (Cascading Style Sheets):</strong> This is where your website gets its personality! CSS controls the visual appearance of your web pages, allowing you to define styles for fonts, colors, layouts, and animations.</li><li><strong>JavaScript (Optional):</strong> While not essential for basic websites, JavaScript adds interactivity and dynamic elements. It allows you to create features like animations, image carousels, and forms that respond to user input.</li></ul><br /><h3>Building Your First Website:</h3><p>Now that you understand the fundamentals, let's get your hands dirty with building your first website! Here's a simplified roadmap:</p><ol><li><strong>Choose a Text Editor:</strong> Start with a simple text editor like Notepad (Windows) or TextEdit (Mac) to write your HTML and CSS code. As you progress, consider exploring code editors with syntax highlighting and features specifically designed for web development.</li><li><strong>Craft Your Basic HTML Structure:</strong> Start by creating an HTML document with the essential tags that define the overall structure of a web page. This includes the &lt;html&gt;, &lt;head&gt;, and &lt;body&gt; tags.</li><li><strong>Add Content and Style:</strong> Within the &lt;body&gt; section, use HTML tags to define headings, paragraphs, images, and links. Next, create a separate CSS file to style your website's elements. You can specify font styles, colors, backgrounds, and layouts using CSS properties.</li><li><strong>Test and Preview:</strong> Save your HTML and CSS files and open them in a web browser to see your website come to life! Experiment with different HTML tags and CSS styles to customize the look and feel of your website.</li></ol><br /><h3>Beyond the Basics:</h3><p>This guide has provided a springboard for your web development journey. As you delve deeper, you'll discover a vast array of resources, tutorials, and coding languages to explore:</p><ul><li><strong>Web Frameworks:</strong> Frameworks like Bootstrap offer pre-written code snippets and templates that can significantly accelerate your website development process.</li><li><strong>Content Management Systems (CMS):</strong> Platforms like WordPress allow you to create and manage website content without extensive coding knowledge.</li><li><strong>Web Hosting:</strong> Once your website is built, you'll need a web hosting service to store your website's files and make them accessible on the internet.</li></ul><br /><h3>The Final Takeaway:</h3><p>Building websites is an exciting and rewarding skill to learn. With dedication, practice, and the plethora of resources available online, you can transform your ideas into a captivating online presence. So, take the first step today, unleash your creativity, and embark on your web development adventure!</p><br /><p><strong>Bonus Tip:</strong> Don't be afraid to experiment and have fun! The beauty of web development lies in its constant evolution and endless possibilities. There are always new things to learn and explore. There's a vibrant online community of web developers eager to help and share their knowledge. So, dive in, ask questions, and get ready to build something amazing!</p>",
+    "authorImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
     "authorName": "Esther Howard",
     "date": "June 12, 2021",
-    "comments": [{
+    "categories": ["Tech", "Web Development", "Website Development", "Website"],
+    "comments": [
+      {
         "author": "Commenter one",
         "message": "Wow! this is a nice blog"
       },
@@ -17,16 +20,20 @@
       {
         "author": "Commenter three",
         "message": "Interesting one"
-      }]
+      }
+    ]
   },
   {
-    "postImg": "./src/image.png",
+    "about": "COO at Team. Author of the upcoming book on Team Management and Leadership",
+    "postImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
     "title": "Unlocking the Secrets of the Hidden City: An Investigative Adventure",
-    "content": "Embark on a captivating journey as The History Wanderer unravels the mysteries of a forgotten city, uncovering its hidden past.",
-    "authorImg": "./src/image.png",
+    "content": "The internet has become an undeniably vast and powerful landscape. Ever wondered how all those amazing websites you visit come to life? The answer lies in the fascinating world of web development! Whether you're a budding entrepreneur with a business idea, an aspiring artist showcasing your work, or simply someone who wants to learn a valuable new skill, this beginner's guide will equip you with the foundational knowledge to build your very own website.\n\nDemystifying the Basics:<br>\nWebsites are essentially collections of electronic documents (called web pages) that are linked together and hosted on a server. When you type a web address (URL) into your browser, it retrieves and displays the relevant web page on your screen. But how do these web pages come into existence? Here's a breakdown of the key ingredients:<br>\n- HTML (HyperText Markup Language): Imagine HTML as the skeleton of your website. It defines the structure and content of your web pages, using tags to specify headings, paragraphs, images, and links.<br>\n- CSS (Cascading Style Sheets): This is where your website gets its personality! CSS controls the visual appearance of your web pages, allowing you to define styles for fonts, colors, layouts, and animations.<br>\n- JavaScript (Optional): While not essential for basic websites, JavaScript adds interactivity and dynamic elements. It allows you to create features like animations, image carousels, and forms that respond to user input.<br>\n\nBuilding Your First Website:<br>\nNow that you understand the fundamentals, let's get your hands dirty with building your first website! Here's a simplified roadmap:<br>\n1. Choose a Text Editor: Start with a simple text editor like Notepad (Windows) or TextEdit (Mac) to write your HTML and CSS code. As you progress, consider exploring code editors with syntax highlighting and features specifically designed for web development.<br>\n2. Craft Your Basic HTML Structure: Start by creating an HTML document with the essential tags that define the overall structure of a web page. This includes the <html>, <head>, and <body> tags.<br>\n3. Add Content and Style: Within the <body> section, use HTML tags to define headings, paragraphs, images, and links. Next, create a separate CSS file to style your website's elements. You can specify font styles, colors, backgrounds, and layouts using CSS properties.<br>\n4. Test and Preview: Save your HTML and CSS files and open them in a web browser to see your website come to life! Experiment with different HTML tags and CSS styles to customize the look and feel of your website.<br>\n\nBeyond the Basics:<br>\nThis guide has provided a springboard for your web development journey. As you delve deeper, you'll discover a vast array of resources, tutorials, and coding languages to explore:<br>\n- Web Frameworks: Frameworks like Bootstrap offer pre-written code snippets and templates that can significantly accelerate your website development process.<br>\n- Content Management Systems (CMS): Platforms like WordPress allow you to create and manage website content without extensive coding knowledge.<br>\n- Web Hosting: Once your website is built, you'll need a web hosting service to store your website's files and make them accessible on the internet.<br>\n\nThe Final Takeaway:<br>\nBuilding websites is an exciting and rewarding skill to learn. With dedication, practice, and the plethora of resources available online, you can transform your ideas into a captivating online presence. So, take the first step today, unleash your creativity, and embark on your web development adventure!<br>\n\nBonus Tip:<br>\nDon't be afraid to experiment and have fun! The beauty of web development lies in its constant evolution and endless possibilities. There are always new things to learn and explore. There's a vibrant online community of web developers eager to help and share their knowledge. So, dive in, ask questions, and get ready to build something amazing!",
+    "authorImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
     "authorName": "Esther Howard",
     "date": "June 12, 2021",
-    "comments": [{
+    "categories": ["Music"],
+    "comments": [
+      {
         "author": "Commenter one",
         "message": "Wow! this is a nice blog"
       },
@@ -37,36 +44,20 @@
       {
         "author": "Commenter three",
         "message": "Interesting one"
-      }]
+      }
+    ]
   },
   {
-    "postImg": "./src/image.png",
-    "title": "Master the Art of Plant-Based Cooking: Easy & Delicious Recipes",
-    "content": "Impress your friends and family with mouthwatering plant-based meals! Explore simple yet flavorful recipes perfect for beginners.",
-    "authorImg": "./src/image.png",
-    "authorName": "Esther Howard",
-    "date": "June 12, 2021",
-    "comments": [{
-        "author": "Commenter one",
-        "message": "Wow! this is a nice blog"
-      },
-      {
-        "author": "Commenter two",
-        "message": "I'll like to know more"
-      },
-      {
-        "author": "Commenter three",
-        "message": "Interesting one"
-      }]
-  },
-  {
+    "about": "COO at Team. Author of the upcoming book on Team Management and Leadership",
     "postImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
     "title": "Master the Art of Plant-Based Cooking: Easy & Delicious Recipes",
     "content": "Impress your friends and family with mouthwatering plant-based meals! Explore simple yet flavorful recipes perfect for beginners.",
-    "authorImg": "./src/image.png",
+    "authorImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
     "authorName": "Esther Howard",
     "date": "June 12, 2021",
-    "comments": [{
+    "categories": ["UI / UX", "Movies"],
+    "comments": [
+      {
         "author": "Commenter one",
         "message": "Wow! this is a nice blog"
       },
@@ -77,16 +68,44 @@
       {
         "author": "Commenter three",
         "message": "Interesting one"
-      }]
+      }
+    ]
   },
   {
+    "about": "COO at Team. Author of the upcoming book on Team Management and Leadership",
+    "postImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
+    "title": "Master the Art of Plant-Based Cooking: Easy & Delicious Recipes",
+    "content": "Impress your friends and family with mouthwatering plant-based meals! Explore simple yet flavorful recipes perfect for beginners.",
+    "authorImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
+    "authorName": "Esther Howard",
+    "date": "June 12, 2021",
+    "categories": ["Tech", "Sport", "Football"],
+    "comments": [
+      {
+        "author": "Commenter one",
+        "message": "Wow! this is a nice blog"
+      },
+      {
+        "author": "Commenter two",
+        "message": "I'll like to know more"
+      },
+      {
+        "author": "Commenter three",
+        "message": "Interesting one"
+      }
+    ]
+  },
+  {
+    "about": "COO at Team. Author of the upcoming book on Team Management and Leadership",
     "postImg": "https://independent.ng/wp-content/uploads/Leslie-Jamison-576x430.jpg",
     "title": "Master the Art of Plant-Based Cooking: Easy & Delicious Recipes",
     "content": "Impress your friends and family with mouthwatering plant-based meals! Explore simple yet flavorful recipes perfect for beginners.",
-    "authorImg": "./src/image.png",
+    "authorImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
     "authorName": "Esther Howard",
     "date": "June 12, 2021",
-    "comments": [{
+    "categories": ["Tech", "News"],
+    "comments": [
+      {
         "author": "Commenter one",
         "message": "Wow! this is a nice blog"
       },
@@ -97,16 +116,20 @@
       {
         "author": "Commenter three",
         "message": "Interesting one"
-      }]
+      }
+    ]
   },
   {
+    "about": "COO at Team. Author of the upcoming book on Team Management and Leadership",
     "postImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/6070b0016932223adbd79ab2_sddefault-2.jpeg",
     "title": "Master the Art of Plant-Based Cooking: Easy & Delicious Recipes",
     "content": "Impress your friends and family with mouthwatering plant-based meals! Explore simple yet flavorful recipes perfect for beginners.",
-    "authorImg": "./src/image.png",
+    "authorImg": "https://assets-global.website-files.com/606a802fcaa89bc357508cad/65c0f97a1835d6213299c8c5_Boosting%20your%20freelancing%20game_%20AI%20tools%20for%20enhanced%20efficiency.jpg",
     "authorName": "Esther Howard",
     "date": "June 12, 2021",
-    "comments": [{
+    "categories": ["Food and Drinks", "Entertainment"],
+    "comments": [
+      {
         "author": "Commenter one",
         "message": "Wow! this is a nice blog"
       },
@@ -117,6 +140,7 @@
       {
         "author": "Commenter three",
         "message": "Interesting one"
-      }]
+      }
+    ]
   }
 ]

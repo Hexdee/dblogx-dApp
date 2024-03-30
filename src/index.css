@@ -50,6 +50,14 @@ header {
   font-weight: 500;
   color: #ffffffcc;
 }
+header .connect-search {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.connect-search .search {
+  font-size: 1.5rem;
+}
 header .sign-up {
   background: linear-gradient(
     93.5deg,
@@ -187,6 +195,7 @@ header .sign-up {
   gap: 32px;
   padding: 0 20px;
   flex: 1;
+  justify-content: space-between;
 }
 .post .title-desc {
   display: flex;
@@ -313,14 +322,14 @@ header .sign-up {
   font-weight: 400;
   color: #ffffffcc;
 }
-.details .follow {
+.follow {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
 }
-.details .follow p,
-.details .follow i {
+.follow p,
+.follow i {
   background: linear-gradient(
     93.5deg,
     #3e77ff 4.46%,
