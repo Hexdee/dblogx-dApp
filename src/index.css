@@ -25,6 +25,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .logo {
   background: linear-gradient(
@@ -71,6 +72,91 @@ header .sign-up {
   font-size: 0.87rem;
   outline: none;
   border: none;
+}
+header .profile-img {
+  width: 40px;
+  height: 40px;
+  background-color: #6a6b6c;
+  border-radius: 50%;
+  overflow: hidden;
+  display: none;
+}
+header #profile-img {
+  width: 100%;
+}
+.prof-back {
+  background-color: #0e1032;
+  width: 250px;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px 4px rgba(62, 119, 255, 0.2),
+    1px 1px 2px 4px rgba(159, 98, 212, 0.2),
+    1px 1px 2px 4px rgba(255, 78, 170, 0.2);
+  display: none;
+}
+.prof-back.show {
+  display: block;
+}
+.profile-drop {
+  background: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.1) 4.46%,
+    rgba(159, 98, 212, 0.1) 49.98%,
+    rgba(255, 78, 170, 0.1) 95.51%
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.profile-drop .name-mail-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px;
+  border-bottom: 1px solid transparent;
+  border-image-source: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-image-slice: 1;
+}
+.profile-drop .name-mail-btn .name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.02px;
+}
+.profile-drop .profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.profile-links li {
+  list-style: none;
+  padding: 8px 20px;
+  border-radius: 4px 0 0;
+}
+.profile-links .active {
+  background: #ffffff1a;
+}
+.profile-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+}
+#disconnect {
+  border-top: 1px solid transparent;
+  border-image-source: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-image-slice: 1;
 }
 .banner {
   display: flex;
@@ -328,7 +414,7 @@ header .sign-up {
   gap: 8px;
   padding: 10px 16px;
 }
-.follow p,
+.top-creators .follow p,
 .follow i {
   background: linear-gradient(
     93.5deg,
@@ -355,41 +441,45 @@ footer {
   background: #0b0c28;
 }
 footer .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .foot .brand {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
 .brand .socials {
-    padding-top: 8px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 1.5rem;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.5rem;
 }
-.quick-links, .company, .support {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.quick-links,
+.company,
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.quick-links ul, .company ul, .support ul {
-    list-style: none;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
+.quick-links ul,
+.company ul,
+.support ul {
+  list-style: none;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
 }
 .foot h3 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 .foot li {
-    color: #ffffffcc;
-    font-weight: 400;
+  color: #ffffffcc;
+  font-weight: 400;
 }
 
 /* Connect */
@@ -430,4 +520,47 @@ footer .row {
     #ff4eaa 95.51%
   );
   border: none;
+}
+
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+form input {
+  background-color: transparent;
+  outline: none;
+  color: #ffffffcc;
+  padding: 12px;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-image-source: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-image-slice: 1;
+  font-size: 1.25rem;
+}
+form textarea {
+  background-color: transparent;
+  outline: none;
+  color: #ffffffcc;
+  padding: 12px;
+  border: none;
+  font-size: 1.25rem;
+  resize: none;
+}
+input#title {
+  font-size: 2.1rem;
+  font-weight: 800;
+}
+form div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

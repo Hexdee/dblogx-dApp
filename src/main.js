@@ -1,7 +1,7 @@
+import { getFeaturedContents, getAllPosts } from "./allPosts";
 import image from "./image.png";
-import { getFeaturedContents } from "./allPosts";
 
-export const getMain = () => {
+const getMain = () => {
   const main = document.createElement("main");
   // Banner
   const banner = document.createElement("div");
@@ -65,13 +65,6 @@ export const getMain = () => {
   featuredContent.appendChild(featuredTitle);
   featuredContent.appendChild(posts);
   featuredContent.appendChild(exploreMoreBtn);
-
-  getFeaturedContents(posts, 3)
-
-  exploreMoreBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    getFeaturedContents(posts, 3)
-  })
 
   main.appendChild(featuredContent);
 
@@ -219,7 +212,7 @@ export const getMain = () => {
   const followText = document.createElement("p");
   followText.textContent = "Follow";
 
-  img.appendChild(imgElement)
+  img.appendChild(imgElement);
   follow.appendChild(followIcon);
   follow.appendChild(followText);
 
@@ -257,92 +250,29 @@ export const getMain = () => {
 
   main.appendChild(lower);
 
-  const showConnect = () => {
-    document.querySelector(".connect-drop").classList.toggle("show");
-  };
+  bannerDesc.addEventListener("click", (e) => {
+    if (e.target.id === "show-blogs") {
+      e.preventDefault();
+      getAllPosts(main);
+    }
+  });
+  signUpBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    showConnect();
+  });
 
-  signUpBtn.addEventListener('click', (e) =>{
-    e.preventDefault()
-    showConnect()
-  })
+  exploreMoreBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    getFeaturedContents(main, posts, 3);
+  });
 
+  getFeaturedContents(main, posts, 3);
   return main;
 };
 
-// const featuredContainer = document.querySelector(".posts");
-// const explore = document.getElementById("explore");
-// const showAllBlogs = document.getElementById("show-blogs");
-// const signUp = document.querySelectorAll(".sign-up");
+// Show Connect Button
+const showConnect = () => {
+  document.querySelector(".connect-drop").classList.toggle("show");
+};
 
-// const main = document.querySelector("main");
-
-// const getData = async () => {
-//   const contents = await fetch("./src/data.json", { mode: "cors" });
-//   const result = await contents.json();
-//   return result;
-// };
-
-// let currentIndex = 0;
-// const getFeaturedContents = (count) => {
-//   getData()
-//     .then((response) => {
-//       const endIndex = currentIndex + count;
-//       for (let i = currentIndex; i < endIndex; i++) {
-//         if (i >= response.length) break; // Exit loop if we reach end of response
-//         const post = document.createElement("div");
-//         post.classList.add("post");
-//         post.innerHTML = `<div class="post-img"><img src="${
-//           response[i].postImg
-//         }" alt="" /></div>
-//             <div class="post-details">
-//               <div class="title-desc">
-//                 <h3 class="title">
-//                   ${response[i].title}
-//                 </h3>
-//                 <p class="desc">
-//                   ${response[i].content.slice(0, 150)}
-//                 </p>
-//               </div>
-//               <div class="author">
-//                 <img src="${response[i].authorImg}" alt="" />
-//                 <p class="name">${response[i].authorName}</p>
-//                 <p class="date">${response[i].date}</p>
-//               </div>
-//             </div>`;
-
-//         featuredContainer.appendChild(post);
-
-//         post.addEventListener("click", (e) => {
-//           e.preventDefault();
-//           loadPost(response[i]).result();
-//         });
-//       }
-//       currentIndex = endIndex; // Update current index
-//     })
-//     .catch((e) => {
-//       console.log("Error fetching data: ", e);
-//     });
-// };
-
-// explore.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   getFeaturedContents(3); // Fetch 3 more contents
-// });
-
-// signUp.forEach((button) => {
-//   button.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     showConnect();
-//   });
-// });
-
-// const showConnect = () => {
-//   document.querySelector(".connect-drop").classList.toggle("show");
-// };
-
-// getFeaturedContents(3);
-
-// showAllBlogs.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   getMorePosts().result();
-// });
+export { getMain, showConnect };
