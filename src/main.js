@@ -1,9 +1,8 @@
 import { getFeaturedContents, getAllPosts } from "./allPosts";
 import image from "./image.png";
 
-const getMain = () => {
-  const main = document.createElement("main");
-  // Banner
+// Banner Section
+const showBanner = () => {
   const banner = document.createElement("div");
   banner.classList.add("banner", "main-container");
 
@@ -27,9 +26,11 @@ const getMain = () => {
   banner.appendChild(bannerDesc);
   banner.appendChild(bannerImg);
 
-  main.appendChild(banner);
+  return { banner, bannerDesc };
+};
 
-  // About
+// About Section
+const showAbout = () => {
   const about = document.createElement("div");
   about.classList.add("about", "main-container");
 
@@ -44,9 +45,11 @@ const getMain = () => {
 </p>
 </div>`;
 
-  main.appendChild(about);
+  return about;
+};
 
-  // Featured content
+// Featured Section
+const showFeatured = () => {
   const featuredContent = document.createElement("div");
   featuredContent.classList.add("featured-content", "main-container");
 
@@ -66,9 +69,18 @@ const getMain = () => {
   featuredContent.appendChild(posts);
   featuredContent.appendChild(exploreMoreBtn);
 
-  main.appendChild(featuredContent);
+  getFeaturedContents(posts, 3);
 
-  // How it works
+  exploreMoreBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    getFeaturedContents(posts, 3);
+  });
+
+  return { featuredContent, exploreMoreBtn };
+};
+
+// How it works Section
+const showHow = () => {
   const howItWorks = document.createElement("div");
   howItWorks.classList.add("how", "main-container");
 
@@ -174,9 +186,11 @@ const getMain = () => {
   howItWorks.appendChild(howTitle);
   howItWorks.appendChild(howRow);
 
-  main.appendChild(howItWorks);
+  return howItWorks;
+};
 
-  // Top creators
+// Top creators Section
+const showTopCreators = () => {
   const topCreators = document.createElement("div");
   topCreators.classList.add("top-creators", "main-container");
 
@@ -226,9 +240,11 @@ const getMain = () => {
   topCreators.appendChild(topCreatorsTitle);
   topCreators.appendChild(topCreatorsRow);
 
-  main.appendChild(topCreators);
+  return topCreators;
+};
 
-  // Lower section
+// Lower Section
+const showLowerSection = () => {
   const lower = document.createElement("div");
   lower.classList.add("lower");
 
@@ -248,31 +264,18 @@ const getMain = () => {
   lower.appendChild(lowerText);
   lower.appendChild(signUpBtn);
 
-  main.appendChild(lower);
-
-  bannerDesc.addEventListener("click", (e) => {
-    if (e.target.id === "show-blogs") {
-      e.preventDefault();
-      getAllPosts(main);
-    }
-  });
-  signUpBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    showConnect();
-  });
-
-  exploreMoreBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    getFeaturedContents(main, posts, 3);
-  });
-
-  getFeaturedContents(main, posts, 3);
-  return main;
+  return { lower, signUpBtn };
 };
 
-// Show Connect Button
 const showConnect = () => {
   document.querySelector(".connect-drop").classList.toggle("show");
 };
-
-export { getMain, showConnect };
+export {
+  showBanner,
+  showAbout,
+  showFeatured,
+  showHow,
+  showTopCreators,
+  showLowerSection,
+  showConnect,
+};

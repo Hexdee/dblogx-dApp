@@ -1,193 +1,269 @@
-import { getMain, showConnect } from "./main";
+import {
+  showBanner,
+  showAbout,
+  showFeatured,
+  showHow,
+  showTopCreators,
+  showLowerSection,
+  showConnect,
+} from "./main";
 import icpLogo from "./icp-logo.svg";
 import image from "./image.png";
 import "./index.css";
 import { addToData } from "./manageData";
+import { getAllPosts, resetCurrentIndex } from "./allPosts";
 
 let isConnected = false;
-const header = document.createElement("header");
-header.classList.add("container", "header");
 
-// Connect with Internet Identity
-const connectDrop = document.createElement("div");
-connectDrop.classList.add("connect-drop", "container");
+const connectToIcp = () => {
+  const connectDrop = document.createElement("div");
+  connectDrop.classList.add("connect-drop", "container");
 
-const connectAnchor = document.createElement("a");
-connectAnchor.href = "#";
+  const connectAnchor = document.createElement("a");
+  connectAnchor.href = "#";
 
-const connectImg = document.createElement("img");
-connectImg.src = icpLogo;
-connectImg.width = "30";
-connectImg.alt = "icp-logo";
+  const connectImg = document.createElement("img");
+  connectImg.src = icpLogo;
+  connectImg.width = "30";
+  connectImg.alt = "icp-logo";
 
-const connectText = document.createElement("p");
-connectText.textContent = "Connect with Internet Identity";
+  const connectText = document.createElement("p");
+  connectText.textContent = "Connect with Internet Identity";
 
-connectAnchor.appendChild(connectImg);
-connectAnchor.appendChild(connectText);
-connectDrop.appendChild(connectAnchor);
-header.appendChild(connectDrop);
+  connectAnchor.appendChild(connectImg);
+  connectAnchor.appendChild(connectText);
+  connectDrop.appendChild(connectAnchor);
 
-// Navigation
-const navbarHeader = document.createElement("nav");
-navbarHeader.classList.add("navbar-header");
+  connectAnchor.addEventListener("click", (e) => {
+    e.preventDefault();
+    const signup = document.querySelector("#connect");
+    const userImage = document.querySelector(".profile-img");
+    if (signup) {
+      signup.style.display = "none";
+      userImage.style.display = "block";
+    }
 
-const logo = document.createElement("h1");
-logo.classList.add("logo");
-logo.textContent = "DBlogX";
+    //   isConnected = true;
+    showConnect();
+  });
 
-const navLinks = document.createElement("div");
-navLinks.classList.add("nav-links");
-
-const ul = document.createElement("ul");
-
-const links = ["Home", "Explore", "About", "How it Works"];
-links.forEach((linkText) => {
-  const li = document.createElement("li");
-  li.classList.add("link");
-  const a = document.createElement("a");
-  a.href = "#";
-  a.textContent = linkText;
-  li.appendChild(a);
-  ul.appendChild(li);
-});
-
-navLinks.appendChild(ul);
-
-const connectSearch = document.createElement("div");
-connectSearch.classList.add("connect-search");
-
-const profBack = document.createElement("div");
-const profile = document.createElement("div");
-const name = document.createElement("p");
-const topProfile = document.createElement("div");
-const downProfile = document.createElement("div");
-
-const mail = document.createElement("p");
-const btn = document.createElement("a");
-btn.href = "";
-
-const profileNavs = document.createElement("ul");
-profileNavs.classList.add("profile-navs");
-profileNavs.innerHTML = `<li><a href="" id="new">create post</a></li>
-  <li class="active"><a href="">Wallet</a></li>
-  <li><a href="">Stats</a></li>
-  <li><a href="">Subscription</a></li>
-  <li><a href="">Settings</a></li>
-  <li id="disconnect"><a href="">DIsConnect</a></li>`;
-
-profBack.classList.add("prof-back");
-profile.classList.add("profile-drop");
-topProfile.classList.add("name-mail-btn");
-name.classList.add("name");
-downProfile.classList.add("profile-links");
-btn.classList.add("btn", "btn-colored");
-
-name.textContent = "Esther Howard";
-mail.textContent = "estherhoward@gmail.com";
-btn.textContent = "View profile";
-
-topProfile.appendChild(name);
-topProfile.appendChild(mail);
-topProfile.appendChild(btn);
-
-downProfile.appendChild(profileNavs);
-
-profile.appendChild(topProfile);
-profile.appendChild(downProfile);
-profBack.appendChild(profile);
-
-const searchIcon = document.createElement("i");
-searchIcon.classList.add("fa-solid", "fa-magnifying-glass", "search");
-
-const signUpAnchor = document.createElement("a");
-signUpAnchor.href = "";
-signUpAnchor.classList.add("sign-up");
-signUpAnchor.id = "connect";
-signUpAnchor.textContent = "Connect";
-
-const userImage = document.createElement("div");
-userImage.classList.add("profile-img");
-const userImageSrc = new Image();
-userImageSrc.src = image;
-userImageSrc.id = "profile-img";
-
-const showUserImage = () => {
-  //   if (isConnected) {
-  signUpAnchor.style.display = "none";
-  userImage.style.display = "block";
-  showConnect();
-  //   }
+  return { connectDrop };
 };
 
-userImage.addEventListener("click", (e) => {
-  profBack.classList.toggle("show");
-});
+const createNavigation = () => {
+  const navLinks = document.createElement("div");
+  navLinks.classList.add("nav-links");
 
-signUpAnchor.addEventListener("click", (e) => {
-  e.preventDefault();
-  showConnect();
-});
-connectAnchor.addEventListener("click", (e) => {
-  e.preventDefault();
-  //   isConnected = true;
-  showUserImage();
-});
-// showUserImage();
+  const ul = document.createElement("ul");
 
-userImage.appendChild(userImageSrc);
-connectSearch.appendChild(searchIcon);
-connectSearch.appendChild(signUpAnchor);
-connectSearch.appendChild(userImage);
+  const links = ["Home", "Explore", "About", "How it Works"];
+  links.forEach((linkText) => {
+    const li = document.createElement("li");
+    li.classList.add("link");
+    const a = document.createElement("a");
+    a.href = "#";
+    a.textContent = linkText;
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
 
-navbarHeader.appendChild(logo);
-navbarHeader.appendChild(navLinks);
-navbarHeader.appendChild(connectSearch);
-navbarHeader.appendChild(profBack);
+  navLinks.appendChild(ul);
 
-header.appendChild(navbarHeader);
+  return navLinks;
+};
 
-// Create footer
-const footer = document.createElement("footer");
-footer.innerHTML = `
-        <div class="foot main-container row">
-            <div class="brand">
-                <h1 class="logo">DBlogX</h1>
-                <p>
-                    Empowering Creators with Decentralization and Direct Monetization
-                </p>
-                <div class="socials">
-                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-discord"></i></a>
-                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="#"><i class="fa-brands fa-medium"></i></a>
-                </div>
-            </div>
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Explore</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Create</a></li>
-                </ul>
-            </div>
-            <div class="company">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="support">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </div>
-        </div>
-    `;
+const createUserSection = () => {
+  const connectSearch = document.createElement("div");
+  connectSearch.classList.add("connect-search");
 
+  const profBack = document.createElement("div");
+  const profile = document.createElement("div");
+  const name = document.createElement("p");
+  const topProfile = document.createElement("div");
+  const downProfile = document.createElement("div");
+
+  const mail = document.createElement("p");
+  const btn = document.createElement("a");
+  btn.href = "";
+
+  const profileNavs = document.createElement("ul");
+  profileNavs.classList.add("profile-navs");
+  profileNavs.innerHTML = `<li><a href="" id="new">create post</a></li>
+    <li class="active"><a href="">Wallet</a></li>
+    <li><a href="">Stats</a></li>
+    <li><a href="">Subscription</a></li>
+    <li><a href="">Settings</a></li>
+    <li id="disconnect"><a href="">DIsConnect</a></li>`;
+
+  profBack.classList.add("prof-back");
+  profile.classList.add("profile-drop");
+  topProfile.classList.add("name-mail-btn");
+  name.classList.add("name");
+  downProfile.classList.add("profile-links");
+  btn.classList.add("btn", "btn-colored");
+
+  name.textContent = "Esther Howard";
+  mail.textContent = "estherhoward@gmail.com";
+  btn.textContent = "View profile";
+
+  topProfile.appendChild(name);
+  topProfile.appendChild(mail);
+  topProfile.appendChild(btn);
+
+  downProfile.appendChild(profileNavs);
+
+  profile.appendChild(topProfile);
+  profile.appendChild(downProfile);
+  profBack.appendChild(profile);
+
+  const searchIcon = document.createElement("i");
+  searchIcon.classList.add("fa-solid", "fa-magnifying-glass", "search");
+
+  const signUpAnchor = document.createElement("a");
+  signUpAnchor.href = "";
+  signUpAnchor.classList.add("sign-up");
+  signUpAnchor.id = "connect";
+  signUpAnchor.textContent = "Connect";
+
+  const userImage = document.createElement("div");
+  userImage.classList.add("profile-img");
+  const userImageSrc = new Image();
+  userImageSrc.src = image;
+  userImageSrc.id = "profile-img";
+
+  userImage.appendChild(userImageSrc);
+  connectSearch.appendChild(searchIcon);
+  connectSearch.appendChild(signUpAnchor);
+  connectSearch.appendChild(userImage);
+
+  signUpAnchor.addEventListener("click", (e) => {
+    e.preventDefault();
+    showConnect();
+  });
+
+  userImage.addEventListener("click", (e) => {
+    profBack.classList.toggle("show");
+  });
+
+  return { connectSearch, profileNavs, profBack, userImage, signUpAnchor };
+};
+const createHeader = () => {
+  const header = document.createElement("header");
+  header.classList.add("container", "header");
+
+  // Navigation
+  const navbarHeader = document.createElement("nav");
+  navbarHeader.classList.add("navbar-header");
+
+  const logo = document.createElement("h1");
+  logo.classList.add("logo");
+  logo.textContent = "DBlogX";
+
+  const connectDrop = connectToIcp();
+  const navLinks = createNavigation();
+  const userSection = createUserSection();
+
+  navbarHeader.appendChild(logo);
+  navbarHeader.appendChild(navLinks);
+  navbarHeader.appendChild(userSection.connectSearch);
+  navbarHeader.appendChild(userSection.profBack);
+
+  header.appendChild(connectDrop.connectDrop);
+  header.appendChild(navbarHeader);
+
+  return header;
+};
+
+const createMain = () => {
+  const main = document.createElement("main");
+
+  const bannerSection = showBanner();
+  const aboutSection = showAbout();
+  const featuredSection = showFeatured();
+  const howItWorks = showHow();
+  const topCreatorsSection = showTopCreators();
+  const lowerSection = showLowerSection();
+
+  main.appendChild(bannerSection.banner);
+  main.appendChild(aboutSection);
+  main.appendChild(featuredSection.featuredContent);
+  main.appendChild(howItWorks);
+  main.appendChild(topCreatorsSection);
+  main.appendChild(lowerSection.lower);
+
+  bannerSection.bannerDesc.addEventListener("click", (e) => {
+    if (e.target.id === "show-blogs") {
+      e.preventDefault();
+      main.innerHTML = "";
+      main.appendChild(getAllPosts());
+    }
+  });
+
+  lowerSection.signUpBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    showConnect();
+  });
+
+  return main;
+};
+
+const createFooter = () => {
+  const footer = document.createElement("footer");
+  footer.innerHTML = `
+          <div class="foot main-container row">
+              <div class="brand">
+                  <h1 class="logo">DBlogX</h1>
+                  <p>
+                      Empowering Creators with Decentralization and Direct Monetization
+                  </p>
+                  <div class="socials">
+                      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                      <a href="#"><i class="fa-brands fa-discord"></i></a>
+                      <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                      <a href="#"><i class="fa-brands fa-medium"></i></a>
+                  </div>
+              </div>
+              <div class="quick-links">
+                  <h3>Quick Links</h3>
+                  <ul>
+                      <li><a href="#">Explore</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">How it works</a></li>
+                      <li><a href="#">Create</a></li>
+                  </ul>
+              </div>
+              <div class="company">
+                  <h3>Company</h3>
+                  <ul>
+                      <li><a href="#">Terms of Service</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                  </ul>
+              </div>
+              <div class="support">
+                  <h3>Support</h3>
+                  <ul>
+                      <li><a href="#">Help</a></li>
+                  </ul>
+              </div>
+          </div>
+      `;
+
+  return footer;
+};
+
+const renderHomePage = () => {
+  const header = createHeader();
+  const main = createMain();
+  const footer = createFooter();
+
+  document.body.appendChild(header);
+  document.body.appendChild(main);
+  document.body.appendChild(footer);
+};
+
+renderHomePage();
+
+const profileNavs = document.querySelector(".profile-navs");
 profileNavs.addEventListener("click", (e) => {
   if (e.target.id === "new") {
     e.preventDefault();
@@ -195,9 +271,12 @@ profileNavs.addEventListener("click", (e) => {
     if (mainElement) {
       mainElement.innerHTML = "";
     }
-    document.body.removeChild(footer);
-    profBack.classList.remove("show");
-    navLinks.style.display = "none";
+    const footer = document.querySelector("footer");
+    if (footer) {
+      document.body.removeChild(footer);
+    }
+    // profBack.classList.remove("show");
+    // navLinks.style.display = "none";
 
     // Create form element
     const form = document.createElement("form");
@@ -284,10 +363,11 @@ profileNavs.addEventListener("click", (e) => {
 
       addToData(newContent);
 
-      form.reset();
-      mainElement.remove();
+      resetCurrentIndex();
+
       document.body.innerHTML = "";
-      loadPage();
+      form.reset();
+      renderHomePage();
     });
 
     cancelButton.addEventListener("click", function (event) {
@@ -295,10 +375,3 @@ profileNavs.addEventListener("click", (e) => {
     });
   }
 });
-
-function loadPage() {
-  document.body.appendChild(header);
-  document.body.appendChild(getMain());
-  document.body.appendChild(footer);
-}
-loadPage();

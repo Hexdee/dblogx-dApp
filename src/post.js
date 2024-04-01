@@ -1,10 +1,8 @@
 import data from "./data.json";
 import "./blog.css";
 
-
-const authorName2 = document.createElement('p')
-const showPostPage = (main, post) => {
-  main.innerHTML = "";
+const authorName2 = document.createElement("p");
+const showPostPage = (post) => {
   const container = document.createElement("div");
   const mainPost = document.createElement("div");
 
@@ -53,7 +51,7 @@ const showPostPage = (main, post) => {
   follow.classList.add("follow");
   followIcon.classList.add("fa-solid", "fa-user-plus");
 
-  container.classList.add('post-cont')
+  container.classList.add("post-cont");
   topIcons.classList.add("top-icons");
   likeComment.classList.add("like-comment");
   likeDiv.classList.add("like");
@@ -122,21 +120,21 @@ const showPostPage = (main, post) => {
   const authorWrite = document.createElement("p");
   const authorRole = document.createElement("p");
   const authorImg2 = document.createElement("div");
-  const authorImSrc2 = new Image()
+  const authorImSrc2 = new Image();
 
   subDiv.classList.add("sub");
   authorComment.classList.add("author-comment");
   authorDetails.classList.add("author-deets");
-  authorImg2.classList.add('img')
+  authorImg2.classList.add("img");
   authorWrite.classList.add("written");
   writerDiv.classList.add("writer");
   writer.classList.add("author");
 
   authorWrite.textContent = "WRITTEN BY";
-  authorImSrc2.src = post.authorImg
+  authorImSrc2.src = post.authorImg;
   authorRole.textContent = post.about;
-  
-  authorImg2.appendChild(authorImSrc2)
+
+  authorImg2.appendChild(authorImSrc2);
   writer.appendChild(authorImg2);
   writer.appendChild(writerDiv);
   writerDiv.appendChild(authorWrite);
@@ -197,11 +195,13 @@ const showPostPage = (main, post) => {
   container.appendChild(mainPost);
   container.appendChild(subDiv);
   container.appendChild(morePostDiv);
-  main.appendChild(container);
 
-  const posts = document.querySelector(".posts");
-  getRelatedPosts(posts, 2)
+  const posts = morePostDiv.querySelector(".posts");
+  if (posts) {
+    getRelatedPosts(posts, 2);
+  }
 
+  return container;
 };
 
 let current = 0;
@@ -235,10 +235,14 @@ const getRelatedPosts = (posts, count) => {
 
     posts.appendChild(post);
 
-    // post.addEventListener("click", (e) => {
-    //   e.preventDefault();
-    //   loadPost(data[i]).result();
-    // });
+    post.addEventListener("click", (e) => {
+      const main = document.querySelector('main')
+      if (main) {
+        e.preventDefault();
+        main.innerHTML = ''
+        main.appendChild(showPostPage(data[i]));
+      }
+    });
   }
   current = end; // Update current index
 };

@@ -11,7 +11,7 @@ const getData = async () => {
 
 // Get posts from data
 let currentIndex = 0;
-const getFeaturedContents = (main, posts, count) => {
+const getFeaturedContents = (posts, count) => {
   const endIndex = currentIndex + count;
   for (let i = currentIndex; i < endIndex; i++) {
     if (i >= data.length) break; // Exit loop if we reach end of data
@@ -39,8 +39,12 @@ const getFeaturedContents = (main, posts, count) => {
     posts.appendChild(post);
 
     post.addEventListener("click", (e) => {
-      e.preventDefault();
-      showPostPage(main, data[i]);
+      const main = document.querySelector('main')
+      if (main) {
+        e.preventDefault();
+        main.innerHTML = ''
+        main.appendChild(showPostPage(data[i]));
+      }
     });
   }
   currentIndex = endIndex;
@@ -48,9 +52,9 @@ const getFeaturedContents = (main, posts, count) => {
 };
 
 // Display All Posts
-const getAllPosts = (main) => {
+const getAllPosts = () => {
   currentIndex = 0;
-  main.innerHTML = "";
+  // main.innerHTML = "";
   const allCategories = [];
 
   const gridContainer = document.createElement("div");
@@ -127,14 +131,18 @@ const getAllPosts = (main) => {
 
   gridContainer.appendChild(sidebar);
   gridContainer.appendChild(mainbar);
-  main.appendChild(gridContainer);
 
-  getFeaturedContents(main, posts, 3);
+  getFeaturedContents(posts, 3);
 
   loadMoreBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    getFeaturedContents(main, posts, 3);
+    getFeaturedContents(posts, 3);
   });
+
+  return gridContainer
 };
 
-export { getFeaturedContents, getAllPosts };
+const resetCurrentIndex = () => {
+  currentIndex = 0
+}
+export { getFeaturedContents, getAllPosts, resetCurrentIndex };
