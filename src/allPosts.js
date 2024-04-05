@@ -15,8 +15,9 @@ const getFeaturedContents = (posts, count) => {
   const endIndex = currentIndex + count;
   for (let i = currentIndex; i < endIndex; i++) {
     if (i >= data.length) break; // Exit loop if we reach end of data
-    const post = document.createElement("div");
+    const post = document.createElement("a");
     post.classList.add("post");
+    post.href = `blogs/${data[i].id}`
     post.innerHTML = `<div class="post-img"><img src="${
       data[i].postImg
     }" alt="" /></div>
@@ -67,7 +68,7 @@ const getAllPosts = () => {
   const catList = document.createElement("ul");
   const toptab = document.createElement("div");
   const posts = document.createElement("div");
-  const loadMoreBtn = document.createElement("a");
+  const loadMoreBtn = document.createElement("button");
 
   gridContainer.classList.add("container", "grid-container");
   sidebar.classList.add("sidebar");
@@ -79,8 +80,6 @@ const getAllPosts = () => {
   posts.classList.add("row", "posts");
   loadMoreBtn.classList.add("btn", "btn-colored");
   loadMoreBtn.id = "explore";
-
-  loadMoreBtn.setAttribute("href", "#");
 
   topbrand.innerHTML = `<h2 class="logo">DBlogX</h2>
       <p>
@@ -132,7 +131,7 @@ const getAllPosts = () => {
   gridContainer.appendChild(sidebar);
   gridContainer.appendChild(mainbar);
 
-  getFeaturedContents(posts, 3);
+  getFeaturedContents(posts, 4);
 
   loadMoreBtn.addEventListener("click", (e) => {
     e.preventDefault();

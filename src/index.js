@@ -199,6 +199,11 @@ const createMain = () => {
     }
   });
 
+  featuredSection.exploreMoreBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    main.innerHTML = ''
+    main.appendChild(getAllPosts())
+  })
   lowerSection.signUpBtn.addEventListener("click", (e) => {
     e.preventDefault();
     showConnect();

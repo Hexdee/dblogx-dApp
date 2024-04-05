@@ -60,7 +60,7 @@ const showFeatured = () => {
   posts.classList.add("row", "posts");
 
   const exploreMoreBtn = document.createElement("a");
-  exploreMoreBtn.href = "#";
+  exploreMoreBtn.href = "explore";
   exploreMoreBtn.classList.add("btn", "btn-colored");
   exploreMoreBtn.id = "explore";
   exploreMoreBtn.textContent = "Explore more content";
@@ -70,11 +70,6 @@ const showFeatured = () => {
   featuredContent.appendChild(exploreMoreBtn);
 
   getFeaturedContents(posts, 3);
-
-  exploreMoreBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    getFeaturedContents(posts, 3);
-  });
 
   return { featuredContent, exploreMoreBtn };
 };

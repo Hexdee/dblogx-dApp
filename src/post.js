@@ -180,7 +180,7 @@ const showPostPage = (post) => {
 
   const morePostDiv = document.createElement("div");
   morePostDiv.innerHTML = `<div class="more-post">
-      <p>More from Esther</p>
+      <p>More from ${authorName.textContent}</p>
       <div class="row posts"></div>
       </div>`;
 
@@ -212,7 +212,8 @@ const getRelatedPosts = (posts, count) => {
   );
   for (let i = current; i < end; i++) {
     if (i >= filteredData.length) break; // Exit loop if we reach end of data
-    const post = document.createElement("div");
+    const post = document.createElement("a");
+    post.href = `${filteredData[i].id}`
     post.classList.add("post");
     post.innerHTML = `<div class="post-img"><img src="${
       data[i].postImg
