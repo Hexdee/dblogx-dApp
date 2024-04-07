@@ -150,10 +150,24 @@ const showPostPage = (post) => {
   const imgTextBtn = document.createElement("div");
   const imgText = document.createElement("div");
 
+  const enjoyed = document.createElement("div");
+  const enjoyHead = document.createElement("h3");
+  const enjoyDesc = document.createElement("p");
+  const enjoyBtn = document.createElement("div");
+
+  const usersComments = document.createElement("div");
+
   commentsDiv.classList.add("comments");
   respondButton.classList.add("btn", "btn-colored");
   imgTextBtn.classList.add("img-text-btn");
   imgText.classList.add("img-text");
+
+  enjoyed.classList.add("enjoy-card");
+  enjoyHead.classList.add("enjoy-head");
+  enjoyDesc.classList.add("enjoy-desc");
+  enjoyBtn.classList.add("enjoy-btn");
+
+  usersComments.classList.add("users-comments");
 
   respondButton.setAttribute("href", "#");
   respondButton.textContent = "Respond";
@@ -167,13 +181,71 @@ const showPostPage = (post) => {
         placeholder="Comment"
       ></textarea>`;
 
+  enjoyHead.textContent = "Enjoyed the story? Support the Creator.";
+  enjoyDesc.textContent =
+    "Subscribe for free to receive all their stories in your feed. You could also pledge your support or give them a one-off tip, letting them know you appreciate their work.";
+  enjoyBtn.innerHTML = `<a href="#" class="btn btn-colored">Subscribe For Free</a>
+                        <a href="#" class="btn btn-colored">Pledge Your Support</a>
+                        <a href="#" class="btn">Give a Tip</a>`;
+
+  const allComments = document.createElement("div");
+  allComments.classList.add("all-comments");
+
+  const geAllComments = () => {
+    post.comments.forEach((comment) => {
+      const comm = document.createElement("div");
+      const comAutPro = document.createElement("div");
+      const comAutImg = document.createElement("div");
+      const comAutNameDate = document.createElement("div");
+      const img = new Image();
+      const autName = document.createElement("p");
+      const commDate = document.createElement("p");
+      const commentTxt = document.createElement("p");
+
+      comAutNameDate.classList.add("comment");
+      comAutPro.classList.add("comment-author-profile");
+      comAutImg.classList.add("comment-author-img");
+      comAutNameDate.classList.add("comment-author-name-date");
+      autName.classList.add("name");
+      commDate.classList.add("date");
+      comm.classList.add("comment-d");
+      commentTxt.classList.add("comment-text");
+
+      img.src = comment.authorImg;
+      autName.textContent = comment.author;
+      commDate.textContent = "about 1 hour ago";
+      commentTxt.textContent = comment.message;
+
+      comAutNameDate.appendChild(autName);
+      comAutNameDate.appendChild(commDate);
+      comAutImg.appendChild(img);
+      comAutPro.appendChild(comAutImg);
+      comAutPro.appendChild(comAutNameDate);
+      comm.appendChild(comAutPro);
+      comm.appendChild(commentTxt);
+      allComments.appendChild(comm);
+    });
+    return allComments;
+  };
+  const topCommentTxt = document.createElement("p");
+  topCommentTxt.textContent = `Comments (${post.comments.length})`;
+
+  usersComments.appendChild(topCommentTxt);
+  usersComments.appendChild(geAllComments());
+
+  enjoyed.appendChild(enjoyHead);
+  enjoyed.appendChild(enjoyDesc);
+  enjoyed.appendChild(enjoyBtn);
+
   imgTextBtn.appendChild(imgText);
   imgTextBtn.appendChild(respondButton);
   commentsDiv.appendChild(head);
   commentsDiv.appendChild(imgTextBtn);
 
   authorComment.appendChild(authorDetails);
+  authorComment.appendChild(enjoyed);
   authorComment.appendChild(commentsDiv);
+  authorComment.appendChild(usersComments);
 
   subDiv.appendChild(authorComment);
   container.appendChild(subDiv);
@@ -213,7 +285,7 @@ const getRelatedPosts = (posts, count) => {
   for (let i = current; i < end; i++) {
     if (i >= filteredData.length) break; // Exit loop if we reach end of data
     const post = document.createElement("a");
-    post.href = `${filteredData[i].id}`
+    post.href = `${filteredData[i].id}`;
     post.classList.add("post");
     post.innerHTML = `<div class="post-img"><img src="${
       data[i].postImg
@@ -237,10 +309,10 @@ const getRelatedPosts = (posts, count) => {
     posts.appendChild(post);
 
     post.addEventListener("click", (e) => {
-      const main = document.querySelector('main')
+      const main = document.querySelector("main");
       if (main) {
         e.preventDefault();
-        main.innerHTML = ''
+        main.innerHTML = "";
         main.appendChild(showPostPage(data[i]));
       }
     });
