@@ -205,7 +205,6 @@ header #profile-img {
   );
   border-image-slice: 1;
   margin-top: 24px;
-  width: fit-content;
 }
 .btn:hover {
   background: linear-gradient(
@@ -360,6 +359,9 @@ header #profile-img {
   gap: 20px;
   box-shadow: 0px 4px 8px 0px #0000001a;
   padding: 20px;
+}
+.card .btn {
+  align-self: flex-start;
 }
 .card .icon-header-desc {
   display: flex;
@@ -563,7 +565,7 @@ form input {
   border-image-slice: 1;
   font-size: 1.25rem;
 }
-form textarea {
+/* form textarea {
   background-color: transparent;
   outline: none;
   color: #ffffffcc;
@@ -571,12 +573,12 @@ form textarea {
   border: none;
   font-size: 1.25rem;
   resize: none;
-}
+} */
 input#title {
   font-size: 2.1rem;
   font-weight: 800;
 }
-form div {
+form .btn-div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -596,7 +598,7 @@ form div {
   font-weight: 400;
 }
 .enjoy-desc {
-  color: #FFFFFFCC;
+  color: #ffffffcc;
   font-weight: 400;
 }
 .enjoy-btn {
@@ -650,10 +652,9 @@ form div {
   font-weight: 400;
 }
 .comment-author-name-date .date {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  color: #FFFFFFCC;
-
+  color: #ffffffcc;
 }
 .all-comments {
   display: flex;
@@ -678,4 +679,137 @@ form div {
   color: #ffffff99;
   margin-left: 72px;
   border-radius: 4px;
+}
+dialog {
+  width: 28rem;
+  margin: auto;
+  padding: 32px;
+  border-radius: 8px;
+  background-color: #272945;
+  border: none;
+}
+.tip-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.cancel-tip {
+  background-color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  align-self: flex-end;
+  color: #0b0c28;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.img-name .img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.img-name .img img {
+  width: 100%;
+}
+.tip-card {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    93.5deg,
+    #3e77ff 4.46%,
+    #9f62d4 49.98%,
+    #ff4eaa 95.51%
+  );
+  border-image-slice: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 16px;
+}
+.tip-card .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tip-card .tip-amount {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.tip-amount .btn {
+  padding: 10px 16px;
+  text-align: center;
+}
+
+/* Quill */
+.ql-toolbar.ql-snow {
+  border-width: 1px;
+  border-style: solid;
+  border-image-source: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-image-slice: 1;
+  padding: 12px;
+  font-family: "Heebo", sans-serif;
+}
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+  font-family: "Heebo", sans-serif;
+}
+.ql-toolbar.ql-snow .ql-picker-options {
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 8px;
+}
+.ql-snow .ql-picker-options {
+  background-color: #272945;
+  display: none;
+  min-width: 100%;
+  padding: 4px 8px;
+  position: absolute;
+  white-space: nowrap;
+}
+.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  border-image-source: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-image-slice: 1;
+}
+.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  border-image-source: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-image-slice: 1;
+}
+.editor-cont {
+  display: flex;
+  flex-direction: column;
+}
+.ql-container.ql-snow {
+  border-image-source: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-image-slice: 1;
+  padding: 12px;
+  font-size: 1rem;
+}
+.ql-tooltip.ql-hidden {
+  display: none;
 }

@@ -19,5 +19,8 @@
     "webpack-dev-server": "^5.0.4",
     "xml-loader": "^1.2.1",
     "yamljs": "^0.3.0"
+  },
+  "dependencies": {
+    "quill": "^2.0.0-rc.5"
   }
 }

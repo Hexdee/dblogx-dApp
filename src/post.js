@@ -1,6 +1,89 @@
 import data from "./data.json";
 import "./blog.css";
 
+// Data for populating the dialog
+const dialogData = {
+  imgSrc: "https://via.placeholder.com/150",
+  imgAlt: "Image Description",
+  imgName: "Image Name",
+  texts: ["Text 1", "Text 2", "Text 3"],
+  tipAmounts: [
+    "Tip Amount 1",
+    "Tip Amount 2",
+    "Tip Amount 3",
+    "Tip Amount 4",
+    "Tip Amount 5",
+    "Tip Amount 6",
+  ],
+  buttonText: "Button Text",
+};
+
+// Function to create and populate the dialog
+function createAndPopulateDialog(dialogData) {
+  // Create the dialog element
+  const dialog = document.createElement("dialog");
+
+  // Create the tip container
+  const tipContainer = document.createElement("div");
+  tipContainer.classList.add("tip-container");
+
+  const cancelTip = document.createElement("div");
+  cancelTip.classList.add("cancel-tip");
+  cancelTip.textContent = "X";
+
+  cancelTip.addEventListener('click', () => dialog.close())
+
+  // Create the image container
+  const imgNameContainer = document.createElement("div");
+  imgNameContainer.classList.add("img-name");
+  const img = document.createElement("img");
+  img.classList.add("img");
+  img.src = dialogData.imgSrc;
+  img.alt = dialogData.imgAlt;
+  const imgName = document.createElement("p");
+  imgName.textContent = dialogData.imgName;
+  imgNameContainer.appendChild(img);
+  imgNameContainer.appendChild(imgName);
+
+  // Create the tip card
+  const tipCard = document.createElement("div");
+  tipCard.classList.add("tip-card");
+  const textsContainer = document.createElement("div");
+  textsContainer.classList.add("texts");
+
+  textsContainer.innerHTML = `<p style="font-weight: 600; color: #ffffff;">Send me a tip</p>
+  <p style="font-size: .85rem; color: #FFFFFFCC; font-weight: 400;">Support Esther Howard with a small one-off tip.</p>
+  <p style="font-size: .85rem; color: #FFFFFFCC; font-weight: 400;">Why tipping?</p>`;
+
+  const tipAmountsContainer = document.createElement("div");
+  tipAmountsContainer.classList.add("tip-amount");
+  dialogData.tipAmounts.forEach((tipAmount, index) => {
+    const p = document.createElement("p");
+    p.classList.add('btn')
+    p.textContent = `$${index + 1}`;
+    tipAmountsContainer.appendChild(p);
+  });
+  const btnColored = document.createElement("button");
+  btnColored.classList.add("btn", "btn-colored");
+  btnColored.textContent = 'Send Tip';
+  tipCard.appendChild(textsContainer);
+  tipCard.appendChild(tipAmountsContainer);
+  tipCard.appendChild(btnColored);
+
+  // Append all elements to the dialog
+  tipContainer.appendChild(cancelTip);
+  tipContainer.appendChild(imgNameContainer);
+  tipContainer.appendChild(tipCard);
+  dialog.appendChild(tipContainer);
+
+  document.body.appendChild(dialog);
+
+  return dialog;
+}
+
+// Call the function with dialogData
+createAndPopulateDialog(dialogData);
+
 const authorName2 = document.createElement("p");
 const showPostPage = (post) => {
   const container = document.createElement("div");
@@ -186,10 +269,16 @@ const showPostPage = (post) => {
     "Subscribe for free to receive all their stories in your feed. You could also pledge your support or give them a one-off tip, letting them know you appreciate their work.";
   enjoyBtn.innerHTML = `<a href="#" class="btn btn-colored">Subscribe For Free</a>
                         <a href="#" class="btn btn-colored">Pledge Your Support</a>
-                        <a href="#" class="btn">Give a Tip</a>`;
+                        <a href="#" class="btn" id="give-tip">Give a Tip</a>`;
 
   const allComments = document.createElement("div");
   allComments.classList.add("all-comments");
+
+  enjoyBtn.addEventListener("click", (e) => {
+    if (e.target.id === "give-tip") {
+      createAndPopulateDialog(dialogData).showModal();
+    }
+  });
 
   const geAllComments = () => {
     post.comments.forEach((comment) => {

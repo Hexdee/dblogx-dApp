@@ -9,9 +9,11 @@ import {
 } from "./main";
 import icpLogo from "./icp-logo.svg";
 import image from "./image.png";
+import "quill/dist/quill.snow.css";
 import "./index.css";
 import { addToData } from "./manageData";
 import { getAllPosts, resetCurrentIndex } from "./allPosts";
+import Quill from "quill";
 
 let isConnected = false;
 
@@ -304,16 +306,28 @@ profileNavs.addEventListener("click", (e) => {
     form.appendChild(imageUrlInput);
 
     // Create textarea for content
-    const contentTextarea = document.createElement("textarea");
-    contentTextarea.setAttribute("name", "content");
-    contentTextarea.setAttribute("id", "content");
-    contentTextarea.setAttribute("rows", "10");
-    contentTextarea.setAttribute("required", "true");
-    contentTextarea.setAttribute("placeholder", "Your post here...");
-    form.appendChild(contentTextarea);
+    const editorContainer = document.createElement('div')
+    editorContainer.classList.add('editor-cont')
+    const editor = document.createElement("div");
+    editorContainer.appendChild(editor)
+    editor.id = "editor"
+    form.appendChild(editorContainer);
+
+    const options = {
+      debug: 'info',
+      modules: {
+        toolbar: true,
+      },
+      placeholder: 'Compose an epic...',
+      theme: 'snow'
+    };
+    const quill = new Quill(editor, options);
+
+    // Initialize quill editor
 
     // Create div for buttons
     const buttonDiv = document.createElement("div");
+    buttonDiv.classList.add('btn-div')
 
     // Create publish button
     const publishButton = document.createElement("button");
@@ -329,29 +343,26 @@ profileNavs.addEventListener("click", (e) => {
     cancelButton.textContent = "Cancel";
     buttonDiv.appendChild(cancelButton);
 
-    // Function to adjust textarea rows based on content
-    function adjustTextareaRows() {
-      const rows = contentTextarea.value.split("\n").length;
-      contentTextarea.rows = rows < 1 ? 1 : rows;
-    }
-
-    // Event listener for input in textarea
-    contentTextarea.addEventListener("input", adjustTextareaRows);
-
     // Append button div to form
     form.appendChild(buttonDiv);
 
     // Append form to the document body
     mainElement.appendChild(form);
 
-    // Add submit event listener to the form
+    // Assuming quill is your Quill instance
+const quillRoot = document.querySelector('.ql-editor'); // Get the Quill editor's root element
+const htmlContent = quillRoot.innerHTML; // Get the HTML content of the Quill editor
+
+
+// Add submit event listener to the form
     form.addEventListener("submit", function (event) {
       event.preventDefault(); // Prevent default form submission behavior
-
+      console.log(quill.clipboard.convert(quill.getContents()));
       // Get form inputs
       const title = titleInput.value;
       const imageUrl = imageUrlInput.value;
-      const content = contentTextarea.value;
+      const delta = quill.getContents();
+      const content = editor.innerHTML
 
       const newContent = {
         about: "This is a Sample about",
