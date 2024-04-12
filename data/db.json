@@ -1,0 +1,135 @@
+{
+  "blogs": [
+    {
+      "about": "Software Engineer. Passionate about building scalable applications.",
+      "postImg": "https://via.placeholder.com/600x400",
+      "title": "Building Microservices with Node.js and Docker",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
+      "authorImg": "https://via.placeholder.com/150",
+      "authorName": "David Johnson",
+      "date": "April 3, 2024",
+      "categories": ["Tech", "Software Engineering"],
+      "comments": [
+        {
+          "author": "Commenter One",
+          "authorImg": "https://via.placeholder.com/50",
+          "message": "Great article!"
+        },
+        {
+          "author": "Commenter Two",
+          "authorImg": "https://via.placeholder.com/50",
+          "message": "Very informative."
+        }
+      ],
+      "id": 1
+    },
+    {
+      "about": "Graphic Designer. Specializing in branding and digital design.",
+      "postImg": "https://via.placeholder.com/600x400",
+      "title": "The Art of Branding: Creating Memorable Brand Identities",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
+      "authorImg": "https://via.placeholder.com/150",
+      "authorName": "Emily White",
+      "date": "April 3, 2024",
+      "categories": ["Design", "Branding"],
+      "comments": [],
+      "id": 2
+    },
+    {
+      "about": "Marketing Specialist. Experienced in digital marketing strategies.",
+      "postImg": "https://via.placeholder.com/600x400",
+      "title": "Effective Social Media Marketing Tips for Small Businesses",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
+      "authorImg": "https://via.placeholder.com/150",
+      "authorName": "Michael Brown",
+      "date": "April 3, 2024",
+      "categories": ["Marketing", "Social Media"],
+      "comments": [
+        {
+          "author": "Commenter One",
+          "authorImg": "https://via.placeholder.com/50",
+          "message": "Insightful read!"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "about": "Photographer. Capturing moments that tell stories.",
+      "postImg": "https://via.placeholder.com/600x400",
+      "title": "The Art of Photography: Composition Techniques and Tips",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
+      "authorImg": "https://via.placeholder.com/150",
+      "authorName": "Sarah Adams",
+      "date": "April 3, 2024",
+      "categories": ["Photography", "Art"],
+      "comments": [],
+      "id": 4
+    },
+    {
+      "about": "Finance Analyst. Providing insights into financial markets.",
+      "postImg": "https://via.placeholder.com/600x400",
+      "title": "Understanding Cryptocurrency: A Beginner's Guide to Digital Money",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
+      "authorImg": "https://via.placeholder.com/150",
+      "authorName": "Daniel Clark",
+      "date": "April 3, 2024",
+      "categories": ["Finance", "Cryptocurrency"],
+      "comments": [],
+      "id": 5
+    },
+    {
+      "about": "Fitness Trainer. Helping individuals achieve their fitness goals.",
+      "postImg": "https://via.placeholder.com/600x400",
+      "title": "10 Effective Workouts for Beginners to Kickstart Your Fitness Journey",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
+      "authorImg": "https://via.placeholder.com/150",
+      "authorName": "Jessica Miller",
+      "date": "April 3, 2024",
+      "categories": ["Fitness", "Health"],
+      "comments": [],
+      "id": 6
+    },
+    {
+      "about": "Travel Blogger. Sharing adventures from around the world.",
+      "postImg": "https://via.placeholder.com/600x400",
+      "title": "Exploring Hidden Gems: Off-the-Beaten-Path Destinations You Must Visit",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
+      "authorImg": "https://via.placeholder.com/150",
+      "authorName": "Sophie Taylor",
+      "date": "April 3, 2024",
+      "categories": ["Travel", "Adventure"],
+      "comments": [
+        {
+          "author": "Commenter One",
+          "authorImg": "https://via.placeholder.com/50",
+          "message": "Love this! Can't wait to explore these places."
+        }
+      ],
+      "id": 7
+    },
+    {
+      "about": "Game Developer. Creating immersive gaming experiences.",
+      "postImg": "https://via.placeholder.com/600x400",
+      "title": "Game Development 101: From Concept to Launch",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
+      "authorImg": "https://via.placeholder.com/150",
+      "authorName": "Chris Evans",
+      "date": "April 3, 2024",
+      "categories": ["Game Development", "Gaming"],
+      "comments": [],
+      "id": 8
+    },
+    {
+      "about": "Interior Designer. Transforming spaces into stunning environments.",
+      "postImg": "https://via.placeholder.com/600x400",
+      "title": "Modern Interior Design Trends: Creating Stylish and Functional Spaces",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
+      "authorImg": "https://via.placeholder.com/150",
+      "authorName": "Olivia Johnson",
+      "date": "April 3, 2024",
+      "categories": ["Design", "Interior Design"],
+      "comments": [],
+      "id": 9
+    }
+  ]
+}
