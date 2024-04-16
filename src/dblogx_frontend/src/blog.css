@@ -1,0 +1,216 @@
+main > .post-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.main-post {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.main-post .title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.375rem;
+}
+.main-post .author-profile {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.main-post .author {
+  display: flex;
+  gap: 16px;
+}
+.main-post .author .img,
+.author-comment .author .img {
+  width: 48px;
+  height: 48px;
+  background-color: #94a3b1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.main-post .author img {
+  width: 100%;
+  /* border-radius: 50%; */
+}
+.author-comment .author img {
+  width: 100%;
+  /* border-radius: 50%; */
+}
+.author .name-date {
+  color: #ffffffcc;
+  font-weight: 400;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  line-height: 23.5px;
+}
+.author .name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.writer .written {
+  color: #ffffff99;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.writer .name {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.author-profile .follow {
+  padding: 0;
+}
+.top-icons {
+  border-width: 1px 0px;
+  border-style: solid;
+  border-image-source: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-image-slice: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+}
+.top-icons > div {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.top-icons > div > div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.post-img img {
+  width: 100%;
+}
+article {
+  line-height: 41.4px;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.category-tab {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.category-tab p {
+  padding: 8px 12px;
+  background: #ffffff1a;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.author-comment,
+.more-post {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.author-comment .author {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.author-comment .author-deets {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.author-comment .comments {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-image-source: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-image-slice: 1;
+  padding: 32px 0;
+}
+.comments > p {
+  color: #ffffffcc;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.author-deets > p {
+  color: #ffffffcc;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.img-text-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.img-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.img-text-btn .img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #dae3ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+.img-text i {
+  color: #94a3b1;
+}
+textarea {
+  background-color: transparent;
+  flex: 1;
+  border: 2px solid transparent; /* Set border color to transparent */
+  border-image: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.2) 4.46%,
+    rgba(159, 98, 212, 0.2) 49.98%,
+    rgba(255, 78, 170, 0.2) 95.51%
+  );
+  border-radius: 4px;
+  border-image-slice: 1;
+  resize: none;
+  outline: none;
+  padding: 16px;
+  color: #ffffff99;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.comments a {
+  align-self: flex-end;
+}
+.more-post .posts {
+  background: linear-gradient(
+    93.5deg,
+    rgba(62, 119, 255, 0.03) 4.46%,
+    rgba(159, 98, 212, 0.03) 49.98%,
+    rgba(255, 78, 170, 0.03) 95.51%
+  );
+  padding: 32px;
+  /* max-height: 542px; */
+}
+.post {
+  flex: 1;
+}
