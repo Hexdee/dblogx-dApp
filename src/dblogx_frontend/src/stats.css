@@ -1,0 +1,57 @@
+.grid-cont .top-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(656px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+.top-grid > div {
+  background: #ffffff1a;
+  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  text-align: center;
+  border-radius: 8px;
+}
+.top-grid > div p {
+    font-size: 14px;
+    font-weight: 600;
+}
+.top-grid > div h2 {
+    font-size: 36px;
+    font-weight: 800;
+}
+.low-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin: 40px auto;
+}
+.low-grid > div {
+    background: #ffffff1a;
+    padding: 32px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    text-align: center;
+    border-radius: 8px;
+}
+.low-grid > div h2 {
+    font-size: 36px;
+    font-weight: 800;
+}
+.low-grid > div p {
+    font-size: 14px;
+    font-weight: 600;
+}
+.low-grid > div .go {
+    background: linear-gradient(
+        93.5deg,
+        #3e77ff 4.46%,
+        #9f62d4 49.98%,
+        #ff4eaa 95.51%
+      );
+      color: transparent;
+      background-clip: text;
+}

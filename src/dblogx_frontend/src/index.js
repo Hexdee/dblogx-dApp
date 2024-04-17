@@ -1,9 +1,11 @@
 import { MainPage } from "./pages/Main";
 import "./index.css";
+import "./wallet.css";
 import { Connect } from "./components/Connect";
 import { ProfileImg } from "./components/ProfileImg";
 import { ProfileCard } from "./components/ProfileCard";
 import { Explore } from "./pages/Explore";
+import { Profile } from "./pages/Profile";
 
 let isConnected = false;
 const main = document.querySelector("main");
@@ -27,14 +29,7 @@ const getConnected = () => {
   connectBtns.forEach((connectBtn) => {
     connectBtn.style.display = "none";
   });
-  loadPage(MainPage());
-  const lowerSection = document.querySelector(".lower");
-  const main = document.querySelector(".main");
-  if (main && lowerSection) {
-    main.removeChild(lowerSection);
-  }
-  connectSearch.appendChild(profileImg);
-  profileImg.style.display = "flex";
+  loadPage(Profile());
 };
 
 const showProfileCard = () => {

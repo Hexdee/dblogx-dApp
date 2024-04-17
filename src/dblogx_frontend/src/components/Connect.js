@@ -1,6 +1,5 @@
-import { getConnected, loadPage } from "..";
+import { getConnected } from "..";
 import logo from "../icp-logo.svg";
-import { MainPage } from "../pages/Main";
 const Connect = () => {
   const connectDrop = document.createElement("div");
   connectDrop.classList.add("connect-drop", "container");

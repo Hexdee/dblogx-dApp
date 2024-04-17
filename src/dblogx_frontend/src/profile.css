@@ -1,0 +1,101 @@
+.top-banner {
+  height: 300px;
+  background-color: aquamarine;
+  position: relative;
+  z-index: -1;
+}
+.img-cont {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  background-color: #fff;
+  overflow: hidden;
+  position: absolute;
+  left: 250px;
+  bottom: -50px;
+}
+
+.form-elem {
+  margin-top: 90px;
+}
+.form-elem fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.form-elem input,
+.form-elem textarea {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    93.5deg,
+    #3e77ff 4.46%,
+    #9f62d4 49.98%,
+    #ff4eaa 95.51%
+  );
+  border-image-slice: 1;
+  padding: 10px 16px;
+}
+.form-elem label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+legend {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.top-prof {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.top-prof .prof {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 400;
+}
+.prof h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.prof .date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.date * {
+  color: #ffffffcc;
+}
+.handles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 20px auto;
+}
+.handles h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.handles .socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.5rem;
+}
+.stories {
+  font-size: 22px;
+  font-weight: 600;
+}
+.top-input, .low-input {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.top-input label, .low-input label {
+  width: 100%;
+}
