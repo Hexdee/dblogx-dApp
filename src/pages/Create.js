@@ -1,3 +1,6 @@
+import { loadPage } from "..";
+import { MainPage } from "./Main";
+
 const Create = () => {
   // Create form element
   const form = document.createElement("form");
@@ -43,6 +46,34 @@ const Create = () => {
   publishButton.classList.add("btn", "btn-colored");
   publishButton.textContent = "Publish";
   buttonDiv.appendChild(publishButton);
+
+  // Sections
+  const about = "New User details to be updated";
+  const autImg =
+    "https://cdn.pixabay.com/photo/2018/01/06/09/25/hijab-3064633_640.jpg";
+  const autName = "New User";
+  publishButton.addEventListener("click", (e) => {
+    e.preventDefault();
+      e.preventDefault();
+      const post = {
+        about,
+        postImg: imageUrlInput.value,
+        title: titleInput.value,
+        content: editor.value,
+        authorImg: autImg,
+        authorName: autName,
+        date: "April 18, 2024",
+        categories: [],
+        comments: [],
+      };
+      fetch("http://localhost:8000/blogs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(post),
+      }).then(() => {
+        loadPage(MainPage())
+      });
+  });
 
   // Create cancel button
   const cancelButton = document.createElement("a");

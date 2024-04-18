@@ -2,10 +2,10 @@
   "blogs": [
     {
       "about": "Software Engineer. Passionate about building scalable applications.",
-      "postImg": "https://via.placeholder.com/600x400",
+      "postImg": "https://cdn.pixabay.com/photo/2016/10/09/08/32/digital-marketing-1725340_1280.jpg",
       "title": "Building Microservices with Node.js and Docker",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
-      "authorImg": "https://via.placeholder.com/150",
+      "authorImg": "https://cdn.pixabay.com/photo/2018/01/06/09/25/hijab-3064633_640.jpg",
       "authorName": "David Johnson",
       "date": "April 3, 2024",
       "categories": ["Tech", "Software Engineering"],
@@ -25,10 +25,10 @@
     },
     {
       "about": "Graphic Designer. Specializing in branding and digital design.",
-      "postImg": "https://via.placeholder.com/600x400",
+      "postImg": "https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076533_1280.jpg",
       "title": "The Art of Branding: Creating Memorable Brand Identities",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
-      "authorImg": "https://via.placeholder.com/150",
+      "authorImg": "https://cdn.pixabay.com/photo/2017/04/01/21/06/portrait-2194457_640.jpg",
       "authorName": "Emily White",
       "date": "April 3, 2024",
       "categories": ["Design", "Branding"],
@@ -37,10 +37,10 @@
     },
     {
       "about": "Marketing Specialist. Experienced in digital marketing strategies.",
-      "postImg": "https://via.placeholder.com/600x400",
+      "postImg": "https://cdn.pixabay.com/photo/2014/08/24/19/01/apps-426559_1280.jpg",
       "title": "Effective Social Media Marketing Tips for Small Businesses",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
-      "authorImg": "https://via.placeholder.com/150",
+      "authorImg": "https://cdn.pixabay.com/photo/2016/11/18/17/08/fashion-1835871_640.jpg",
       "authorName": "Michael Brown",
       "date": "April 3, 2024",
       "categories": ["Marketing", "Social Media"],
@@ -55,7 +55,7 @@
     },
     {
       "about": "Photographer. Capturing moments that tell stories.",
-      "postImg": "https://via.placeholder.com/600x400",
+      "postImg": "https://cdn.pixabay.com/photo/2018/01/25/10/47/marketing-strategies-3105875_1280.jpg",
       "title": "The Art of Photography: Composition Techniques and Tips",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
       "authorImg": "https://via.placeholder.com/150",
@@ -67,7 +67,7 @@
     },
     {
       "about": "Finance Analyst. Providing insights into financial markets.",
-      "postImg": "https://via.placeholder.com/600x400",
+      "postImg": "https://cdn.pixabay.com/photo/2024/02/15/14/00/man-8575459_1280.jpg",
       "title": "Understanding Cryptocurrency: A Beginner's Guide to Digital Money",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
       "authorImg": "https://via.placeholder.com/150",
@@ -79,10 +79,10 @@
     },
     {
       "about": "Fitness Trainer. Helping individuals achieve their fitness goals.",
-      "postImg": "https://via.placeholder.com/600x400",
+      "postImg": "https://cdn.pixabay.com/photo/2016/11/14/03/06/woman-1822459_1280.jpg",
       "title": "10 Effective Workouts for Beginners to Kickstart Your Fitness Journey",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
-      "authorImg": "https://via.placeholder.com/150",
+      "authorImg": "https://cdn.pixabay.com/photo/2015/03/03/18/58/woman-657753_1280.jpg",
       "authorName": "Jessica Miller",
       "date": "April 3, 2024",
       "categories": ["Fitness", "Health"],
@@ -91,17 +91,17 @@
     },
     {
       "about": "Travel Blogger. Sharing adventures from around the world.",
-      "postImg": "https://via.placeholder.com/600x400",
+      "postImg": "https://cdn.pixabay.com/photo/2023/09/17/18/47/landscape-8259156_1280.jpg",
       "title": "Exploring Hidden Gems: Off-the-Beaten-Path Destinations You Must Visit",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
-      "authorImg": "https://via.placeholder.com/150",
+      "authorImg": "https://cdn.pixabay.com/photo/2016/12/19/21/36/woman-1919143_1280.jpg",
       "authorName": "Sophie Taylor",
       "date": "April 3, 2024",
       "categories": ["Travel", "Adventure"],
       "comments": [
         {
           "author": "Commenter One",
-          "authorImg": "https://via.placeholder.com/50",
+          "authorImg": "https://cdn.pixabay.com/photo/2016/12/19/21/36/woman-1919143_1280.jpg",
           "message": "Love this! Can't wait to explore these places."
         }
       ],
@@ -112,7 +112,7 @@
       "postImg": "https://via.placeholder.com/600x400",
       "title": "Game Development 101: From Concept to Launch",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
-      "authorImg": "https://via.placeholder.com/150",
+      "authorImg": "https://cdn.pixabay.com/photo/2018/11/08/23/52/man-3803551_1280.jpg",
       "authorName": "Chris Evans",
       "date": "April 3, 2024",
       "categories": ["Game Development", "Gaming"],
@@ -121,10 +121,10 @@
     },
     {
       "about": "Interior Designer. Transforming spaces into stunning environments.",
-      "postImg": "https://via.placeholder.com/600x400",
+      "postImg": "https://cdn.pixabay.com/photo/2016/07/12/11/39/checkmate-1511866_1280.jpg",
       "title": "Modern Interior Design Trends: Creating Stylish and Functional Spaces",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel fermentum lacus. Fusce euismod justo id leo aliquam, nec elementum enim ultricies.",
-      "authorImg": "https://via.placeholder.com/150",
+      "authorImg": "https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_1280.jpg",
       "authorName": "Olivia Johnson",
       "date": "April 3, 2024",
       "categories": ["Design", "Interior Design"],

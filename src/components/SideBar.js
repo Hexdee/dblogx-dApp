@@ -12,10 +12,10 @@ const SideBar = () => {
   categories.classList.add("categories");
   catList.classList.add("cat-list");
 
-  topbrand.innerHTML = `
-        <h2 class="logo">DBlogX</h2>
-        <p>We empower creators with decentralization and direct monetization</p>
-        <a href="#" class="btn btn-colored sign-up">Connect</a>`;
+  // topbrand.innerHTML = `
+  //       <h2 class="logo">DBlogX</h2>
+  //       <p>We empower creators with decentralization and direct monetization</p>
+  //       <a href="#" class="btn btn-colored sign-up">Connect</a>`;
 
   categTitle.textContent = `CATEGORIES`;
 
@@ -45,7 +45,7 @@ const SideBar = () => {
 
       categories.appendChild(categTitle);
       categories.appendChild(catList);
-      sidebar.appendChild(topbrand);
+      // sidebar.appendChild(topbrand);
       sidebar.appendChild(categories);
     })
     .catch(error => {

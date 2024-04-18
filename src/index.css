@@ -51,6 +51,12 @@ header {
   font-weight: 500;
   color: #ffffffcc;
 }
+.nav-links ul a:hover {
+  color: #e24d9a;
+}
+.nav-links ul a.active {
+  color: #e24d9a;
+}
 header .connect-search {
   display: flex;
   align-items: center;
@@ -206,6 +212,7 @@ header #profile-img {
   background-color: transparent;
   border-image-slice: 1;
   margin-top: 24px;
+  cursor: pointer;
 }
 .btn:hover {
   background: linear-gradient(
@@ -288,6 +295,15 @@ header #profile-img {
     rgba(255, 78, 170, 0.1) 95.51%
   );
   border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid #0000001a;
+}
+.post:hover {
+  border: 2px solid #3e77ff;
+}
+.post:hover .title {
+  color: #3e77ff;
 }
 .post img {
   width: 100%;
